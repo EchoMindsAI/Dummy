@@ -6,6 +6,14 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    sourcemap: true
+  },
+  opmtimizeDeps: {
+    exclude: ['lucid-react']
+  },
+  server: {
+    port: 3000,
+    host: true
   },
 });
